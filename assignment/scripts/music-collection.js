@@ -19,3 +19,13 @@ console.log(addToCollection('Zaba', 'Glass Animals', '2014'));
 console.log(addToCollection('Disintegration', 'The Cure', '1989'));
 console.log(addToCollection('Watching Movies with the Sound Off', 'Mac Miller', '2013'));
 console.log(collection);
+
+function showCollection(array){
+  console.log('Showing Collection');
+  console.log(`albums in collection: ${array.length}`);
+  for (let album of collection) {
+    console.log(album.titleOfAlbum, 'by', album.recordingArtist, 'published in', album.published);
+  }
+}
+
+console.log(showCollection(collection));
