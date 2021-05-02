@@ -29,3 +29,16 @@ function showCollection(array){
 }
 
 console.log(showCollection(collection));
+
+function findByArtist(artist, array){
+  let matchedAlbums = []
+  for (let album of collection) {
+    if (album.recordingArtist === artist) {
+      matchedAlbums.push(album.titleOfAlbum)
+    }
+  }
+  return matchedAlbums
+}
+console.log(addToCollection('The Divine Feminine', 'Mac Miller', '2016'));
+console.log(findByArtist('Mac Miller', collection));
+console.log(findByArtist('Bruno Mars', collection));
